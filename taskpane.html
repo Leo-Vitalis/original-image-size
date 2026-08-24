@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <title>Original Image Size</title>
+
+    <script
+        src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js">
+    </script>
+
+    <style>
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.4;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 16px;
+            line-height: 1.4;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h2>Original Image Size</h2>
+
+    <p>
+        New pasted images are restored automatically.
+    </p>
+
+    <button id="restore">
+        Restore Selected Image
+    </button>
+
+    <div id="status">
+        Initializing...
+    </div>
+
+
+    <script src="taskpane.js"></script>
+
+</body>
+
+</html>

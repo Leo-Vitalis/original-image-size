@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<OfficeApp
+    xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+    xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+    xsi:type="TaskPaneApp">
+
+    <!-- Basic settings -->
+
+    <Id>8d1e4d5b-4c6a-4d4a-9b6e-0f4c7e5d2a11</Id>
+
+    <Version>2.0.0.0</Version>
+
+    <ProviderName>Local</ProviderName>
+
+    <DefaultLocale>en-US</DefaultLocale>
+
+    <DisplayName
+        DefaultValue="Original Image Size" />
+
+    <Description
+        DefaultValue="Automatically restore pasted Excel images to their original size." />
+
+    <IconUrl
+        DefaultValue="https://localhost:3000/icon-32.png" />
+
+    <HighResolutionIconUrl
+        DefaultValue="https://localhost:3000/icon-80.png" />
+
+    <SupportUrl
+        DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/" />
+
+    <AppDomains>
+        <AppDomain>https://localhost:3000</AppDomain>
+    </AppDomains>
+
+
+    <!-- Hosts -->
+
+    <Hosts>
+        <Host Name="Workbook" />
+    </Hosts>
+
+
+    <!-- Shared Runtime requirement -->
+
+    <Requirements>
+
+        <Sets DefaultMinVersion="1.1">
+
+            <Set
+                Name="SharedRuntime"
+                MinVersion="1.1" />
+
+        </Sets>
+
+    </Requirements>
+
+
+    <!-- Default task pane -->
+
+    <DefaultSettings>
+
+        <SourceLocation
+            DefaultValue="https://localhost:3000/taskpane.html" />
+
+    </DefaultSettings>
+
+
+    <Permissions>
+        ReadWriteDocument
+    </Permissions>
+
+
+    <!-- Version Overrides -->
+
+    <VersionOverrides
+        xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+        xsi:type="VersionOverridesV1_0">
+
+
+        <Hosts>
+
+            <Host xsi:type="Workbook">
+
+
+                <!-- Shared runtime -->
+
+                <Runtimes>
+
+                    <Runtime
+                        resid="OriginalImageSize.Url"
+                        lifetime="long" />
+
+                </Runtimes>
+
+
+                <!-- Desktop -->
+
+                <DesktopFormFactor>
+
+
+                    <GetStarted>
+
+                        <Title
+                            resid="GetStarted.Title" />
+
+                        <Description
+                            resid="GetStarted.Description" />
+
+                        <LearnMoreUrl
+                            resid="GetStarted.LearnMoreUrl" />
+
+                    </GetStarted>
+
+
+                    <!-- JavaScript file used by ExecuteFunction ribbon commands -->
+
+                    <FunctionFile
+                        resid="OriginalImageSize.Url" />
+
+
+                    <!-- Main ribbon -->
+
+                    <ExtensionPoint
+                        xsi:type="PrimaryCommandSurface">
+
+
+                        <CustomTab
+                            id="OriginalImageSizeTab">
+
+
+                            <Group
+                                id="OriginalImageSizeGroup">
+
+
+                                <Label
+                                    resid="GroupLabel" />
+
+
+                                <Icon>
+
+                                    <bt:Image
+                                        size="16"
+                                        resid="Icon.16x16" />
+
+                                    <bt:Image
+                                        size="32"
+                                        resid="Icon.32x32" />
+
+                                    <bt:Image
+                                        size="80"
+                                        resid="Icon.80x80" />
+
+                                </Icon>
+
+                                <Control
+                                    xsi:type="Button"
+                                    id="RestoreSelectedImage">
+
+                                    <Label
+                                        resid="RestoreSelected.Label" />
+
+                                    <Supertip>
+
+                                        <Title
+                                            resid="RestoreSelected.Label" />
+
+                                        <Description
+                                            resid="RestoreSelected.Tooltip" />
+
+                                    </Supertip>
+
+                                    <Icon>
+
+                                        <bt:Image
+                                            size="16"
+                                            resid="Icon.16x16" />
+
+                                        <bt:Image
+                                            size="32"
+                                            resid="Icon.32x32" />
+
+                                        <bt:Image
+                                            size="80"
+                                            resid="Icon.80x80" />
+
+                                    </Icon>
+
+                                    <Action
+                                        xsi:type="ExecuteFunction">
+
+                                        <FunctionName>restoreSelectedImage</FunctionName>
+
+                                    </Action>
+
+                                </Control>
+
+
+                                <!-- Open task pane -->
+
+                                <Control
+                                    xsi:type="Button"
+                                    id="OpenOriginalImageSize">
+
+
+                                    <Label
+                                        resid="TaskpaneButton.Label" />
+
+
+                                    <Supertip>
+
+                                        <Title
+                                            resid="TaskpaneButton.Label" />
+
+                                        <Description
+                                            resid="TaskpaneButton.Tooltip" />
+
+                                    </Supertip>
+
+
+                                    <Icon>
+
+                                        <bt:Image
+                                            size="16"
+                                            resid="Icon.16x16" />
+
+                                        <bt:Image
+                                            size="32"
+                                            resid="Icon.32x32" />
+
+                                        <bt:Image
+                                            size="80"
+                                            resid="Icon.80x80" />
+
+                                    </Icon>
+
+
+                                    <Action
+                                        xsi:type="ShowTaskpane">
+
+                                        <SourceLocation
+                                            resid="OriginalImageSize.Url" />
+
+                                    </Action>
+
+
+                                </Control>
+
+
+                            </Group>
+
+
+                            <Label
+                                resid="GroupLabel" />
+
+
+                        </CustomTab>
+
+
+                    </ExtensionPoint>
+
+
+                </DesktopFormFactor>
+
+
+            </Host>
+
+        </Hosts>
+
+
+        <!-- Resources -->
+
+        <Resources>
+
+
+            <bt:Images>
+
+                <bt:Image
+                    id="Icon.16x16"
+                    DefaultValue="https://localhost:3000/icon-16.png" />
+
+                <bt:Image
+                    id="Icon.32x32"
+                    DefaultValue="https://localhost:3000/icon-32.png" />
+
+                <bt:Image
+                    id="Icon.80x80"
+                    DefaultValue="https://localhost:3000/icon-80.png" />
+
+            </bt:Images>
+
+
+            <bt:Urls>
+
+                <bt:Url
+                    id="OriginalImageSize.Url"
+                    DefaultValue="https://localhost:3000/taskpane.html" />
+
+                <bt:Url
+                    id="GetStarted.LearnMoreUrl"
+                    DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/" />
+
+            </bt:Urls>
+
+
+            <bt:ShortStrings>
+
+                <bt:String
+                    id="TaskpaneButton.Label"
+                    DefaultValue="Original Image Size" />
+
+                <bt:String
+                    id="GroupLabel"
+                    DefaultValue="Image Tools" />
+
+                <bt:String
+                    id="GetStarted.Title"
+                    DefaultValue="Original Image Size is ready" />
+
+                <bt:String
+                    id="RestoreSelected.Label"
+                    DefaultValue="Restore Selected Image" />
+
+            </bt:ShortStrings>
+
+
+            <bt:LongStrings>
+
+                <bt:String
+                    id="TaskpaneButton.Tooltip"
+                    DefaultValue="Open the Original Image Size task pane." />
+
+                <bt:String
+                    id="GetStarted.Description"
+                    DefaultValue="New pasted images are automatically restored to their original size." />
+
+                <bt:String
+                    id="RestoreSelected.Tooltip"
+                    DefaultValue="Restore the selected image to its original size." />
+
+            </bt:LongStrings>
+
+
+        </Resources>
+
+
+    </VersionOverrides>
+
+</OfficeApp>
