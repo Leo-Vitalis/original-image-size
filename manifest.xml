@@ -24,16 +24,16 @@
         DefaultValue="Automatically restore pasted Excel images to their original size." />
 
     <IconUrl
-        DefaultValue="https://github.com/Leo-Vitalis/original-image-size/blob/main/icon-32.png" />
+        DefaultValue="https://leo-vitalis.github.io/original-image-size/icon-32.png" />
 
     <HighResolutionIconUrl
-        DefaultValue="https://github.com/Leo-Vitalis/original-image-size/blob/main/icon-80.png" />
+        DefaultValue="https://leo-vitalis.github.io/original-image-size/icon-80.png" />
 
     <SupportUrl
         DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/" />
 
     <AppDomains>
-        <AppDomain>https://github.com/Leo-Vitalis/original-image-size/blob/main</AppDomain>
+        <AppDomain>https://leo-vitalis.github.io</AppDomain>
     </AppDomains>
 
 
@@ -64,7 +64,7 @@
     <DefaultSettings>
 
         <SourceLocation
-            DefaultValue="https://github.com/Leo-Vitalis/original-image-size/blob/main/taskpane.html" />
+            DefaultValue="https://leo-vitalis.github.io/original-image-size/taskpane.html" />
 
     </DefaultSettings>
 
@@ -280,15 +280,15 @@
 
                 <bt:Image
                     id="Icon.16x16"
-                    DefaultValue="https://github.com/Leo-Vitalis/original-image-size/blob/main/icon-16.png" />
+                    DefaultValue="https://leo-vitalis.github.io/original-image-size/icon-16.png" />
 
                 <bt:Image
                     id="Icon.32x32"
-                    DefaultValue="https://github.com/Leo-Vitalis/original-image-size/blob/main/icon-32.png" />
+                    DefaultValue="https://leo-vitalis.github.io/original-image-size/icon-32.png" />
 
                 <bt:Image
                     id="Icon.80x80"
-                    DefaultValue="https://github.com/Leo-Vitalis/original-image-size/blob/main/icon-80.png" />
+                    DefaultValue="https://leo-vitalis.github.io/original-image-size/icon-80.png" />
 
             </bt:Images>
 
@@ -297,7 +297,7 @@
 
                 <bt:Url
                     id="OriginalImageSize.Url"
-                    DefaultValue="https://github.com/Leo-Vitalis/original-image-size/blob/main/taskpane.html" />
+                    DefaultValue="https://leo-vitalis.github.io/original-image-size/taskpane.html" />
 
                 <bt:Url
                     id="GetStarted.LearnMoreUrl"
