@@ -8,4 +8,4 @@ Download `manifest.xml` and upload it in Excel for Web via Home -> Add-ins -> Mo
 
 ## Credits
 
-Coded with ChatGPT
+Scripted with ChatGPT
