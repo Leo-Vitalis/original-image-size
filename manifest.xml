@@ -33,7 +33,7 @@
         DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/" />
 
     <AppDomains>
-        <AppDomain>https://localhost:3000</AppDomain>
+        <AppDomain>https://github.com/Leo-Vitalis/original-image-size/blob/main</AppDomain>
     </AppDomains>
 
 
